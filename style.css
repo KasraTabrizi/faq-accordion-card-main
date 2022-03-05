@@ -1,0 +1,137 @@
+/* CSS BASIC RESET */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+/* DEFINE VARIABLES */
+:root {
+  /* PRIMARY TEXT*/
+  --color-primary-very-dark-desat-blue: hsl(238, 29%, 16%);
+  --color-primary-soft-red: hsl(14, 88%, 65%);
+
+  /* BACKGROUND GRADIENT */
+  --color-bg-grad-soft-violet: hsl(273, 75%, 66%);
+  --color-bg-grad-soft-blue: hsl(240, 73%, 65%);
+
+  /* NEUTRAL TEXT*/
+  --color-neutral-very-dark-gray-blue: hsl(237, 12%, 33%);
+  --color-neutral-dark-gray-blue: hsl(240, 6%, 50%);
+
+  /* DIVIDERS */
+  --color-div-light-gray-blue: hsl(240, 5%, 91%);
+
+  /* TYPOGRAPHY */
+  --font-size-base: 12px;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+}
+
+body {
+  font-size: var(--font-size-base);
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-grad-soft-violet) 0%,
+    var(--color-bg-grad-soft-blue) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: white;
+  width: 85vw;
+  height: 68vh;
+  border-radius: 25px;
+  position: relative;
+  margin-top: 50px;
+  box-shadow: 0px 15px 41px 7px rgba(0, 0, 0, 0.25);
+}
+
+.main__container {
+  display: flex;
+  justify-content: center;
+}
+
+.image_mobile__container {
+  position: absolute;
+  top: 0;
+}
+
+.woman_image__mobile {
+  position: absolute;
+  top: -100%;
+}
+
+.faq__container {
+  margin: 10.5em 0;
+  width: 100%;
+  padding: 0 2em;
+  color: var(--color-primary-very-dark-desat-blue);
+  font-size: 0.8rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.4em;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+summary::marker {
+  content: "";
+}
+
+summary:active {
+  transform: rotate(180);
+}
+
+details[open] > summary {
+  font-weight: 700;
+}
+
+img {
+  transition: 0.2s all ease-in-out;
+}
+
+details[open] > summary img {
+  transform: rotate(180deg);
+}
+
+details {
+  padding: 1.5em 0;
+  border-bottom: 1px solid var(--color-div-light-gray-blue);
+}
+
+p {
+  padding-top: 1em;
+  font-size: 0.75rem;
+  color: var(--color-neutral-dark-gray-blue);
+}
+
+/* - Mobile: 375px
+- Desktop: 1440px */
