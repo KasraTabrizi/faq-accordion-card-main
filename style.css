@@ -70,6 +70,10 @@ main {
   justify-content: center;
 }
 
+.box_image__desktop {
+  display: none;
+}
+
 .image_mobile__container {
   position: absolute;
   top: 0;
@@ -149,16 +153,17 @@ p {
     max-width: 915px;
     height: 510px;
     margin-top: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .box_image__desktop {
+    display: block;
     position: absolute;
-    left: -95px;
-    top: 41%;
+    left: 14%;
+    top: 43.8%;
     z-index: 5;
   }
 
